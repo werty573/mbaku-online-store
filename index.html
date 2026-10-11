@@ -7,7 +7,7 @@
 <meta name="description" content="Car stereos, smart home, power tools, audio and gadgets, with pickup in Tunapuna or delivery across Trinidad & Tobago. Concept site by Portside Digital.">
 <meta property="og:title" content="MBAKU Online Store">
 <meta property="og:description" content="Quality products. Affordable prices. Delivery nationwide in Trinidad &amp; Tobago. Concept site by Portside Digital.">
-<meta property="og:image" content="img/toolwall.jpg">
+<meta property="og:image" content="img/mbaku-badge.webp">
 <meta name="theme-color" content="#0B1026">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23FFB81C'/%3E%3Cpath d='M9 29V13l6 8 5-8 5 8 6-8v16' fill='none' stroke='%230B1026' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,7 @@
 <section class="hero" id="hero">
   <div class="hero-sun" aria-hidden="true">
     <svg viewBox="-500 -500 1000 1000" class="rays" id="rays"></svg>
-    <div class="sun-core"></div>
+    <div class="sun-glow"></div>
   </div>
   <div class="hero-grain" aria-hidden="true"></div>
 
@@ -82,12 +82,25 @@
     </ul>
   </div>
 
-  <div class="hero-orbit" id="orbit" aria-hidden="true">
-    <figure class="orb orb-1" data-depth="1.2"><img src="img/stereo.jpg" alt=""><figcaption><b>CarPlay Stereo</b><span>$899</span></figcaption></figure>
-    <figure class="orb orb-2" data-depth="0.7"><img src="img/fanlight.jpg" alt=""><figcaption><b>LED Light Fan</b><span>$199</span></figcaption></figure>
-    <figure class="orb orb-3" data-depth="1.6"><img src="img/planer.jpg" alt=""><figcaption><b>Li-ion Planer</b><span>$499</span></figcaption></figure>
-    <figure class="orb orb-4" data-depth="0.9"><img src="img/earbuds.jpg" alt=""><figcaption><b>Wireless Buds</b><span>$179</span></figcaption></figure>
-    <div class="sticker sticker-sale" data-depth="2">SALE<small>limited stock</small></div>
+  <div class="hero-orbit" id="orbit">
+    <div class="orbit-sys" id="orbitSys">
+      <div class="hero-badge" id="badge">
+        <svg class="badge-ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="ringPath" d="M100 100m-90 0a90 90 0 1 1 180 0a90 90 0 1 1-180 0"/></defs>
+          <text><textPath href="#ringPath" textLength="562" lengthAdjust="spacing">QUALITY PRODUCTS ✦ AFFORDABLE PRICES ✦ M BAKU IS THE ONLINE STORE ✦</textPath></text>
+        </svg>
+        <div class="badge-tilt" id="badgeTilt">
+          <img class="badge-img" src="img/mbaku-badge.webp" alt="MBAKU Online Store logo: quality products, affordable prices" width="960" height="960">
+          <span class="badge-shine" id="badgeShine" aria-hidden="true"></span>
+        </div>
+        <div class="sticker sticker-sale" aria-hidden="true">SALE<small>limited stock</small></div>
+      </div>
+      <figure class="orb" aria-hidden="true"><img src="img/stereo.jpg" alt=""><figcaption><b>CarPlay Stereo</b><span>$899</span></figcaption></figure>
+      <figure class="orb" aria-hidden="true"><img src="img/fanlight.jpg" alt=""><figcaption><b>LED Light Fan</b><span>$199</span></figcaption></figure>
+      <figure class="orb" aria-hidden="true"><img src="img/planer.jpg" alt=""><figcaption><b>Li-ion Planer</b><span>$499</span></figcaption></figure>
+      <figure class="orb" aria-hidden="true"><img src="img/earbuds.jpg" alt=""><figcaption><b>Wireless Buds</b><span>$179</span></figcaption></figure>
+      <figure class="orb" aria-hidden="true"><img src="img/doorbell.jpg" alt=""><figcaption><b>Video Doorbell</b><span>$499</span></figcaption></figure>
+    </div>
   </div>
 
   <a href="#ticker" class="scroll-cue" aria-label="Scroll down"><span></span></a>

@@ -418,6 +418,31 @@
     }));
   }
 
+  /* ORBIT ENGINE: product cards circle the logo like planets */
+  const orbit = { burst: 0, spread: 1, speed: 1, a: 0 };
+  const orbEls = $$('.orb'), orbSys = $('#orbitSys');
+  gsap.set(orbEls, { opacity: 0 });
+  gsap.set('.hero-sun', { xPercent: 50, yPercent: -50, x: 0, y: 0 });
+  gsap.ticker.add((t, dt) => {
+    orbit.a += dt / 1000 * (Math.PI * 2 / 34) * orbit.speed;
+    const w = orbSys.offsetWidth, h = orbSys.offsetHeight, phone = innerWidth <= 720;
+    const rx = (phone ? w * .44 : w * .47) * orbit.spread * orbit.burst;
+    const ry = (phone ? h * .37 : h * .33) * orbit.spread * orbit.burst;
+    const ca = Math.cos(-.12), sa = Math.sin(-.12);
+    orbEls.forEach((el, i) => {
+      const a = orbit.a + i / orbEls.length * Math.PI * 2;
+      const ex = Math.cos(a) * rx, ey = Math.sin(a) * ry;
+      const depth = Math.sin(a); // +1 = front (passes below the logo), -1 = back (behind it)
+      gsap.set(el, {
+        x: ex * ca - ey * sa, y: ex * sa + ey * ca,
+        scale: (.72 + (depth + 1) * .19) * (.4 + .6 * orbit.burst),
+        zIndex: depth > 0 ? 60 : 10,
+        opacity: Math.min(1, orbit.burst * 1.4) * (.55 + (depth + 1) * .225),
+        rotation: Math.cos(a) * -6
+      });
+    });
+  });
+
   /* LOADER */
   const loadTl = gsap.timeline({ onComplete: () => { $('#loader').remove(); lenis?.start(); } });
   const cnt = { v: 0 };
@@ -436,24 +461,32 @@
     const tl = gsap.timeline();
     tl.from('.hero-title .w', { yPercent: 115, rotate: 4, duration: 1.1, stagger: .08, ease: 'power4.out' })
       .from('.hero-eyebrow, .hero-lede, .hero-ctas, .hero-proof', { y: 30, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out' }, .3)
-      .from('.orb', { scale: 0, opacity: 0, duration: 1, stagger: .1, ease: 'back.out(1.6)' }, .2)
-      .from('.sticker', { scale: 0, rotate: -120, duration: .9, ease: 'back.out(2.2)' }, .7)
-      .from('.hero-sun', { scale: .6, opacity: 0, duration: 1.6, ease: 'power3.out' }, 0)
+      .from('.hero-sun', { scale: .5, opacity: 0, duration: 1.8, ease: 'power3.out' }, 0)
+      .from('#badge', { scale: 0, rotate: -220, duration: 1.4, ease: 'back.out(1.3)' }, .1)
+      .from('.badge-ring', { opacity: 0, scale: .7, duration: 1, ease: 'power3.out' }, .7)
+      .to(orbit, { burst: 1, duration: 1.6, ease: 'expo.out' }, .6)
+      .from('.sticker', { scale: 0, rotate: -120, duration: .9, ease: 'back.out(2.2)' }, 1.1)
       .from('.nav', { autoAlpha: 0, duration: .8, ease: 'power2.out' }, .2)
       .add(() => $$('[data-count]').forEach(el => { const o = { v: 0 }; gsap.to(o, { v: +el.dataset.count, duration: 1.8, ease: 'power2.out', onUpdate: () => el.textContent = Math.round(o.v).toLocaleString() + (el.dataset.suffix || '') }); }), .4);
     return tl;
   }
 
-  /* HERO: mouse parallax + scroll */
-  const orbs = $$('#orbit [data-depth]').map(el => ({ d: +el.dataset.depth, x: gsap.quickTo(el, 'x', { duration: .9, ease: 'power3' }), y: gsap.quickTo(el, 'y', { duration: .9, ease: 'power3' }) }));
+  /* HERO: the badge is the sun, products orbit it */
+  const tilt = { rx: gsap.quickTo('#badgeTilt', 'rotationX', { duration: .8, ease: 'power3' }), ry: gsap.quickTo('#badgeTilt', 'rotationY', { duration: .8, ease: 'power3' }) };
+  const sysX = gsap.quickTo('#orbitSys', 'x', { duration: 1.2, ease: 'power3' }), sysY = gsap.quickTo('#orbitSys', 'y', { duration: 1.2, ease: 'power3' });
+  const shine = $('#badgeShine');
   addEventListener('pointermove', e => {
     if (e.pointerType !== 'mouse') return;
     const nx = e.clientX / innerWidth - .5, ny = e.clientY / innerHeight - .5;
-    orbs.forEach(o => { o.x(nx * 40 * o.d); o.y(ny * 30 * o.d); });
+    tilt.ry(nx * 26); tilt.rx(-ny * 22);
+    sysX(nx * 26); sysY(ny * 18);
+    shine.style.setProperty('--sx', (50 + nx * 70) + '%'); shine.style.setProperty('--sy', (40 + ny * 70) + '%');
   });
   gsap.to('.hero-inner', { yPercent: -18, opacity: .2, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
   gsap.to('#orbit', { yPercent: -30, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-  gsap.to('.hero-sun', { scale: 1.25, rotate: 40, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('.rays', { scale: 1.3, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to('#badge', { rotate: -18, scale: .86, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+  gsap.to(orbit, { spread: 1.45, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
 
   /* NAV hide on scroll down */
   ScrollTrigger.create({ start: 200, end: 'max', onUpdate: s => { if (Date.now() > navPinnedUntil) $('#nav').classList.toggle('is-hidden', s.direction === 1 && s.scroll() > 400); } });
@@ -477,6 +510,7 @@
   ScrollTrigger.create({
     onUpdate: s => {
       const v = Math.min(5, 1 + Math.abs(s.getVelocity()) / 400);
+      gsap.to(orbit, { speed: v * 1.6, duration: .2, overwrite: true, onComplete: () => gsap.to(orbit, { speed: 1, duration: 1.4 }) });
       [mA, mB, mR].forEach(t => gsap.to(t, { timeScale: v, duration: .2, overwrite: true, onComplete: () => gsap.to(t, { timeScale: 1, duration: 1 }) }));
     }
   });
