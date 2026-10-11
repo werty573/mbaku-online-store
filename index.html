@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MBAKU Online Store · Quality Products. Affordable Prices.</title>
+<meta name="description" content="Car stereos, smart home, power tools, audio and gadgets, with pickup in Tunapuna or delivery across Trinidad & Tobago. Concept site by Portside Digital.">
+<meta property="og:title" content="MBAKU Online Store">
+<meta property="og:description" content="Quality products. Affordable prices. Delivery nationwide in Trinidad &amp; Tobago. Concept site by Portside Digital.">
+<meta property="og:image" content="img/toolwall.jpg">
+<meta name="theme-color" content="#0B1026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23FFB81C'/%3E%3Cpath d='M9 29V13l6 8 5-8 5 8 6-8v16' fill='none' stroke='%230B1026' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=DM+Sans:opsz,wght@9..40,400..700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-box">
+    <div class="loader-tape"></div>
+    <div class="loader-word"><span>M</span><span>B</span><span>A</span><span>K</span><span>U</span></div>
+    <div class="loader-sub">quality products · affordable prices</div>
+  </div>
+  <div class="loader-count" id="loaderCount">000</div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="MBAKU Online Store home">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold)"/><g class="brand-rays" stroke="var(--ink)" stroke-width="1.4" opacity=".25"><path d="M20 1v6M20 33v6M1 20h6M33 20h6M6.6 6.6l4.2 4.2M29.2 29.2l4.2 4.2M6.6 33.4l4.2-4.2M29.2 10.8l4.2-4.2"/></g><path d="M10 28V13l5.5 7.5L20 13l4.5 7.5L30 13v15" fill="none" stroke="var(--ink)" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+    <span class="brand-text"><b>MBAKU</b><small>online store</small></span>
+  </a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#shop">Shop</a>
+    <a href="#drop">This week's drop</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#how">How to order</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="searchOpen" aria-label="Search products (press /)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    </button>
+    <button class="icon-btn cart-btn" id="cartOpen" aria-label="Open cart">
+      <svg viewBox="0 0 24 24"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <a class="btn btn-wa nav-wa" href="https://wa.me/18687932163" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+      793-2163
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-sun" aria-hidden="true">
+    <svg viewBox="-500 -500 1000 1000" class="rays" id="rays"></svg>
+    <div class="sun-core"></div>
+  </div>
+  <div class="hero-grain" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <p class="eyebrow hero-eyebrow"><span class="dot"></span> Tunapuna · pickup or delivery nationwide</p>
+    <h1 class="hero-title">
+      <span class="line"><span class="w">Quality</span> <span class="w">products.</span></span>
+      <span class="line line-2"><span class="w">Affordable</span> <span class="w accent">prices.</span></span>
+    </h1>
+    <p class="hero-lede">Car stereos, smart home, power tools, audio and gadgets, picked for Trini homes, cars and workshops. Order on WhatsApp and get it at your door by tomorrow.</p>
+    <div class="hero-ctas">
+      <a href="#shop" class="btn btn-gold magnetic">Shop the store <span aria-hidden="true">→</span></a>
+      <a href="#drop" class="btn btn-ghost magnetic">See this week's drop</a>
+    </div>
+    <ul class="hero-proof">
+      <li><b data-count="2400" data-suffix="+">0</b><span>orders delivered</span></li>
+      <li><b>$40</b><span>delivery in Trinidad</span></li>
+      <li><b>$60</b><span>delivery to Tobago</span></li>
+    </ul>
+  </div>
+
+  <div class="hero-orbit" id="orbit" aria-hidden="true">
+    <figure class="orb orb-1" data-depth="1.2"><img src="img/stereo.jpg" alt=""><figcaption><b>CarPlay Stereo</b><span>$899</span></figcaption></figure>
+    <figure class="orb orb-2" data-depth="0.7"><img src="img/fanlight.jpg" alt=""><figcaption><b>LED Light Fan</b><span>$199</span></figcaption></figure>
+    <figure class="orb orb-3" data-depth="1.6"><img src="img/planer.jpg" alt=""><figcaption><b>Li-ion Planer</b><span>$499</span></figcaption></figure>
+    <figure class="orb orb-4" data-depth="0.9"><img src="img/earbuds.jpg" alt=""><figcaption><b>Wireless Buds</b><span>$179</span></figcaption></figure>
+    <div class="sticker sticker-sale" data-depth="2">SALE<small>limited stock</small></div>
+  </div>
+
+  <a href="#ticker" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" id="ticker" aria-hidden="true">
+  <div class="ticker-band band-a"><div class="ticker-track">
+    <span>Quality products</span><i>✦</i><span>Affordable prices</span><i>✦</i><span>Pickup or delivery nationwide</span><i>✦</i><span>Limited stock</span><i>✦</i><span>Call or WhatsApp 793-2163</span><i>✦</i>
+  </div></div>
+  <div class="ticker-band band-b"><div class="ticker-track">
+    <span>Car audio</span><i>●</i><span>Smart home</span><i>●</i><span>Power tools</span><i>●</i><span>Audio</span><i>●</i><span>Gadgets</span><i>●</i><span>New drops weekly</span><i>●</i>
+  </div></div>
+</div>
+
+<!-- UNBOXING (pinned scroll scene) -->
+<section class="unbox" id="unbox">
+  <div class="unbox-stage">
+    <div class="unbox-copy">
+      <p class="eyebrow">The MBAKU promise</p>
+      <h2 class="unbox-title">
+        <span class="ut ut-1">Every box gets opened</span>
+        <span class="ut ut-2">checked, tested</span>
+        <span class="ut ut-3">and only then <em>shipped.</em></span>
+      </h2>
+    </div>
+
+    <div class="scene" aria-hidden="true">
+      <div class="box3d" id="box3d">
+        <div class="face f-front"><span class="box-logo">MBAKU</span><span class="box-fragile">handle with care ↑</span></div>
+        <div class="face f-back"></div>
+        <div class="face f-left"></div>
+        <div class="face f-right"><span class="box-label">QC ✓ PASSED</span></div>
+        <div class="face f-bottom"></div>
+        <div class="flap flap-f"></div>
+        <div class="flap flap-b"></div>
+        <div class="flap flap-l"></div>
+        <div class="flap flap-r"></div>
+        <div class="box-glow"></div>
+      </div>
+      <div class="pop pop-1"><img src="img/watch.jpg" alt=""><b>Smart Watch</b></div>
+      <div class="pop pop-2"><img src="img/gimbal.jpg" alt=""><b>Face-Track Gimbal</b></div>
+      <div class="pop pop-3"><img src="img/doorbell.jpg" alt=""><b>Video Doorbell</b></div>
+      <div class="pop pop-4"><img src="img/speaker.jpg" alt=""><b>Party Speaker</b></div>
+      <div class="pop pop-5"><img src="img/drill.jpg" alt=""><b>Drill Kit</b></div>
+      <div class="pop pop-6"><img src="img/led.jpg" alt=""><b>RGB LED Strip</b></div>
+    </div>
+
+    <ul class="checks" aria-label="Quality checks">
+      <li class="check"><span>01</span> Powered on &amp; tested</li>
+      <li class="check"><span>02</span> Every part counted</li>
+      <li class="check"><span>03</span> Sealed &amp; tagged</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRICE SLASH (pinned) -->
+<section class="slash" id="slash">
+  <div class="slash-stage">
+    <div class="slash-img"><img src="img/planer.jpg" alt="A cordless electric wood planer resting on a workbench"></div>
+    <div class="slash-copy">
+      <p class="eyebrow">Same tool. Less mark-up.</p>
+      <h2 class="slash-name">Lithium-ion Electric Planer</h2>
+      <div class="slash-prices">
+        <div class="was"><small>Typical hardware price</small><span class="was-num">$899</span><svg class="strike" viewBox="0 0 300 60" preserveAspectRatio="none"><path d="M6 44 C 80 30, 180 22, 294 12" /></svg></div>
+        <div class="now"><small>MBAKU price</small><span class="now-num">$<span id="nowNum">899</span></span></div>
+      </div>
+      <div class="stamp" id="stamp">YOU SAVE<br><b>$400</b></div>
+      <ul class="slash-specs">
+        <li>Brushless motor</li><li>2 × Li-ion batteries</li><li>82 mm blade</li><li>Fast charger</li>
+      </ul>
+      <button class="btn btn-gold add-btn" data-add="planer">Add to cart · $499</button>
+    </div>
+  </div>
+</section>
+
+<!-- SHOP -->
+<section class="shop" id="shop">
+  <div class="section-head">
+    <p class="eyebrow">The store</p>
+    <h2 class="h2 split-words">Everything in stock, priced fair, on your doorstep tomorrow.</h2>
+  </div>
+
+  <div class="shop-bar">
+    <div class="chips" role="tablist" aria-label="Categories" id="chips">
+      <button class="chip is-on" data-cat="all" role="tab" aria-selected="true">All <i></i></button>
+      <button class="chip" data-cat="auto" role="tab" aria-selected="false">Car &amp; Auto <i></i></button>
+      <button class="chip" data-cat="home" role="tab" aria-selected="false">Smart Home <i></i></button>
+      <button class="chip" data-cat="tools" role="tab" aria-selected="false">Power Tools <i></i></button>
+      <button class="chip" data-cat="audio" role="tab" aria-selected="false">Audio <i></i></button>
+      <button class="chip" data-cat="gadgets" role="tab" aria-selected="false">Gadgets <i></i></button>
+    </div>
+    <div class="shop-tools">
+      <label class="search-inline">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="shopSearch" placeholder="Search the store…" aria-label="Search the store">
+        <kbd>/</kbd>
+      </label>
+      <select id="sort" aria-label="Sort products">
+        <option value="pop">Most popular</option>
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+        <option value="save">Biggest savings</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>Nothing matches that yet. <a href="https://wa.me/18687932163?text=Hi%20MBAKU%2C%20do%20you%20have%20" target="_blank" rel="noopener">Ask us on WhatsApp</a> and we'll source it.</p>
+</section>
+
+<!-- SPOTLIGHT horizontal -->
+<section class="spot" id="spot">
+  <div class="spot-head">
+    <p class="eyebrow">Best sellers</p>
+    <h2 class="h2">Why the island keeps ordering these.</h2>
+  </div>
+  <div class="spot-track" id="spotTrack">
+    <article class="spot-card sc-auto">
+      <div class="sc-img"><img src="img/dashphone.jpg" alt="Car dashboard with a large touchscreen stereo"></div>
+      <div class="sc-body">
+        <span class="sc-tag">Car &amp; Auto</span>
+        <h3>Plug &amp; Play CarPlay Stereo</h3>
+        <p>Smart driving. Ultimate connectivity. No modification: just plug in and drive.</p>
+        <ul class="sc-chips"><li>Apple CarPlay</li><li>Android Auto</li><li>Bluetooth</li><li>GPS</li><li>Rear camera incl.</li><li>7" &amp; 10"</li></ul>
+        <div class="sc-foot"><span class="sc-price">from $899</span><button class="btn btn-gold btn-sm add-btn" data-add="stereo7">Add 7"</button></div>
+      </div>
+    </article>
+    <article class="spot-card sc-home">
+      <div class="sc-img"><img src="img/doorbell.jpg" alt="White video doorbell mounted on a textured wall"></div>
+      <div class="sc-body">
+        <span class="sc-tag">Smart Home</span>
+        <h3>Smart Video Doorbell</h3>
+        <p>Secure your home. Stay connected. See who's at the gate from the 4.3" indoor screen.</p>
+        <ul class="sc-chips"><li>4.3" indoor screen</li><li>Night vision</li><li>Two-way talk</li><li>Rechargeable</li></ul>
+        <div class="sc-foot"><span class="sc-price">$499 <em>free delivery</em></span><button class="btn btn-gold btn-sm add-btn" data-add="doorbell">Add</button></div>
+      </div>
+    </article>
+    <article class="spot-card sc-tools">
+      <div class="sc-img"><img src="img/chainsaw2.jpg" alt="Person cutting a log with a cordless chainsaw"></div>
+      <div class="sc-body">
+        <span class="sc-tag">Power Tools</span>
+        <h3>48V Cordless Mini Chainsaw</h3>
+        <p>Powerful, efficient, portable. Clears branches without pulling a cord or mixing fuel.</p>
+        <ul class="sc-chips"><li>48V</li><li>6" bar</li><li>2 batteries</li><li>Toolbox incl.</li></ul>
+        <div class="sc-foot"><span class="sc-price">$649</span><button class="btn btn-gold btn-sm add-btn" data-add="chainsaw">Add</button></div>
+      </div>
+    </article>
+    <article class="spot-card sc-gadgets">
+      <div class="sc-img"><img src="img/gimbal2.jpg" alt="Woman filming herself with a phone on a gimbal outdoors"></div>
+      <div class="sc-body">
+        <span class="sc-tag">Gadgets</span>
+        <h3>Face-Tracking Gimbal</h3>
+        <p>Perfect shots. Smart follow. Made for vlogs, lives, TikTok and more.</p>
+        <ul class="sc-chips"><li>Auto face tracking</li><li>360° rotation</li><li>Fits most phones</li><li>USB charging</li></ul>
+        <div class="sc-foot"><span class="sc-price">$249</span><button class="btn btn-gold btn-sm add-btn" data-add="gimbal">Add</button></div>
+      </div>
+    </article>
+    <article class="spot-card sc-home2">
+      <div class="sc-img"><img src="img/fanlight.jpg" alt="Ceiling fan with a glowing light in a dark room"></div>
+      <div class="sc-body">
+        <span class="sc-tag">Smart Home</span>
+        <h3>Drone-Style LED Light Fan</h3>
+        <p>Four fan heads and an LED light that screw into any standard bulb socket. Cool and bright in one.</p>
+        <ul class="sc-chips"><li>4 fan heads</li><li>Remote control</li><li>Silent</li><li>E27 socket</li></ul>
+        <div class="sc-foot"><span class="sc-price">$199</span><button class="btn btn-gold btn-sm add-btn" data-add="fan">Add</button></div>
+      </div>
+    </article>
+    <div class="spot-end">
+      <p>Can't see it?</p>
+      <a class="btn btn-wa" href="https://wa.me/18687932163?text=Hi%20MBAKU%2C%20can%20you%20source%20" target="_blank" rel="noopener">We'll source it →</a>
+    </div>
+  </div>
+  <div class="spot-progress"><i id="spotBar"></i></div>
+</section>
+
+<!-- DROP -->
+<section class="drop" id="drop">
+  <div class="drop-bg"><img src="img/toolwall.jpg" alt=""></div>
+  <div class="drop-inner">
+    <div class="drop-copy">
+      <p class="eyebrow">This week's drop</p>
+      <h2 class="drop-title">The <span>Workshop</span> Drop</h2>
+      <p>Chainsaw, planer, drill and impact driver on one battery platform. Bundle all four and save $350, while stock lasts.</p>
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div><b data-u="d">00</b><small>days</small></div>
+        <div><b data-u="h">00</b><small>hrs</small></div>
+        <div><b data-u="m">00</b><small>min</small></div>
+        <div><b data-u="s">00</b><small>sec</small></div>
+      </div>
+      <div class="stock">
+        <div class="stock-row"><span>Bundles claimed</span><b id="stockText">17 / 25</b></div>
+        <div class="stock-bar"><i id="stockBar"></i></div>
+      </div>
+      <div class="drop-ctas">
+        <button class="btn btn-gold add-btn" data-add="bundle">Grab the bundle · $1,746</button>
+        <span class="drop-was">was <s>$2,096</s></span>
+      </div>
+    </div>
+    <div class="drop-stack" aria-hidden="true">
+      <img src="img/chainsaw.jpg" alt="" class="ds ds-1">
+      <img src="img/planer2.jpg" alt="" class="ds ds-2">
+      <img src="img/drill.jpg" alt="" class="ds ds-3">
+      <img src="img/impact.jpg" alt="" class="ds ds-4">
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY MAP -->
+<section class="delivery" id="delivery">
+  <div class="section-head">
+    <p class="eyebrow">Pickup or delivery nationwide</p>
+    <h2 class="h2">From Tunapuna to <span class="hl" id="destName">anywhere</span>.</h2>
+  </div>
+  <div class="deliv-wrap">
+    <div class="map" id="map">
+      <svg viewBox="0 0 640 470" role="img" aria-label="Map of Trinidad and Tobago showing delivery routes from Tunapuna">
+        <defs>
+          <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.3" fill="currentColor"/></pattern>
+          <clipPath id="tt"><path id="trini" d="M96 158c18-9 38-12 58-10 14 1 22 6 38 5 24-2 44-9 72-11 34-2 62-5 98-8 32-3 62-2 90 1 12 1 20 6 22 15 2 11-3 20-5 32-4 20-6 40-7 60-1 26 0 50-4 74-3 18-9 34-22 42-18 10-42 8-66 9-30 1-62 0-92 3-26 2-50 6-76 10-22 3-44 8-66 8-12 0-26-2-36-8 12-4 26-6 38-12 20-8 40-14 54-28 12-12 16-28 18-44 2-18 0-36-6-52-6-16-16-30-30-40-14-10-32-14-46-22-12-7-24-13-35-14 2-6 6-10 15-10z"/><path id="tobago" d="M520 52c14-10 34-14 52-14 14 0 26 4 26 12 0 10-14 18-28 24-16 7-32 14-46 12-10-2-14-8-12-16 1-7 3-12 8-18z"/></clipPath>
+        </defs>
+        <g class="land">
+          <use href="#trini"/><use href="#tobago"/>
+        </g>
+        <rect width="640" height="470" fill="url(#dots)" clip-path="url(#tt)" class="land-dots"/>
+        <g class="routes" id="routes"></g>
+        <g class="pins" id="pins"></g>
+        <g class="van" id="van"><circle r="13" class="van-bg"/><path d="M-7 -3h8v7h-8zM1 -1h4l2 3v2h-6z" class="van-ico"/></g>
+        <text x="398" y="64" class="map-label">TOBAGO</text>
+        <text x="300" y="232" class="map-label">TRINIDAD</text>
+      </svg>
+    </div>
+    <div class="deliv-panel">
+      <label class="field">
+        <span>Where should we deliver?</span>
+        <select id="zone" aria-label="Delivery area"></select>
+      </label>
+      <div class="deliv-quote">
+        <div><small>Delivery</small><b id="fee">$40</b></div>
+        <div><small>Arrives</small><b id="eta">Tomorrow</b></div>
+      </div>
+      <ul class="deliv-notes">
+        <li><b>Free pickup</b> in Tunapuna, same day, any day.</li>
+        <li><b>$40 anywhere in Trinidad</b>, and free on orders over $1,000. Order by 3pm for next-day drop-off.</li>
+        <li><b>$60 to Tobago</b> by sea bridge courier, 2–3 days.</li>
+        <li><b>Pay on delivery</b> with cash, Linx or bank transfer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="how" id="how">
+  <div class="how-stage">
+    <div class="how-copy">
+      <p class="eyebrow">How to order</p>
+      <h2 class="h2">Three taps. <br>No account. No stress.</h2>
+      <ol class="steps">
+        <li class="step is-on" data-step="0"><span>1</span><div><b>Fill your cart</b><p>Browse, add, adjust. Your cart stays saved on this device.</p></div></li>
+        <li class="step" data-step="1"><span>2</span><div><b>Send it on WhatsApp</b><p>One tap writes the full order, with prices and delivery, straight to us.</p></div></li>
+        <li class="step" data-step="2"><span>3</span><div><b>We confirm &amp; deliver</b><p>A real person replies and books your drop-off. You pay when it arrives.</p></div></li>
+      </ol>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="phone-notch"></div>
+      <div class="phone-head"><span class="ph-av">M</span><div><b>MBAKU Online Store</b><small>online</small></div></div>
+      <div class="chat" id="chat">
+        <div class="bub me b1"><b>New order 🛒</b><br>1 × CarPlay Stereo 7" $899<br>1 × Wireless Earbuds $179<br>Delivery: Chaguanas $40<br><b>Total: $1,118</b><span class="t">10:41 ✓✓</span></div>
+        <div class="bub them b2">Good morning! Both in stock ✅ Drop-off tomorrow between 10 and 1, OK?<span class="t">10:42</span></div>
+        <div class="bub me b3">Perfect 🙌🏾<span class="t">10:42 ✓✓</span></div>
+        <div class="bub them b4">Booked! Driver will call before. Thanks for shopping MBAKU 🧡<span class="t">10:43</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" aria-label="Customer reviews">
+  <div class="rev-track" id="revTrack">
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Stereo came the next day and was really plug &amp; play. My 2012 Tiida feel brand new.</blockquote><figcaption>Kerron, San Juan</figcaption></figure>
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Light fan in the bedroom is a game changer for the heat. $199 is a steal.</blockquote><figcaption>Anisa, Couva</figcaption></figure>
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Asked about the chainsaw at 9pm and got an answer straight away. Delivered to Mayaro, no problem.</blockquote><figcaption>Dexter, Mayaro</figcaption></figure>
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Doorbell set up in 10 minutes. Now I see who at the gate before I come out.</blockquote><figcaption>Michelle, Arima</figcaption></figure>
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Gimbal tracks my face perfect for my lives. Quality real good for the price.</blockquote><figcaption>Shanice, Scarborough</figcaption></figure>
+    <figure class="rev"><div class="stars">★★★★★</div><blockquote>Planer charge fast and cut clean. Saved a good few hundred over the hardware.</blockquote><figcaption>Ravi, Penal</figcaption></figure>
+  </div>
+</section>
+
+<!-- CTA / FOOTER -->
+<footer class="foot" id="contact">
+  <div class="foot-big" aria-hidden="true">
+    <span class="fb fb-1">QUALITY PRODUCTS.</span>
+    <span class="fb fb-2">AFFORDABLE PRICES.</span>
+  </div>
+  <div class="foot-grid">
+    <div>
+      <a class="brand brand-foot" href="#top"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="var(--gold)"/><path d="M10 28V13l5.5 7.5L20 13l4.5 7.5L30 13v15" fill="none" stroke="var(--ink)" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="brand-text"><b>MBAKU</b><small>online store</small></span></a>
+      <p class="foot-tag">Run by Elijah Wilson out of Tunapuna. Quality products and affordable prices, delivered across Trinidad &amp; Tobago.</p>
+    </div>
+    <div>
+      <h4>Order</h4>
+      <a href="https://wa.me/18687932163" target="_blank" rel="noopener">WhatsApp 793-2163</a>
+      <a href="tel:+18687932163">Call 793-2163</a>
+      <a href="#delivery">Delivery &amp; pickup</a>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <a href="#shop" data-jump="auto">Car &amp; Auto</a>
+      <a href="#shop" data-jump="home">Smart Home</a>
+      <a href="#shop" data-jump="tools">Power Tools</a>
+      <a href="#shop" data-jump="audio">Audio &amp; Gadgets</a>
+    </div>
+    <div class="foot-cta">
+      <h4>Get first dibs on drops</h4>
+      <p>New stock lands weekly and the best of it goes fast.</p>
+      <a class="btn btn-wa" href="https://wa.me/18687932163?text=Hi%20MBAKU%2C%20add%20me%20to%20the%20drop%20list%20please!" target="_blank" rel="noopener">Join the drop list</a>
+    </div>
+  </div>
+  <p class="foot-note">© 2026 MBAKU Online Store. This is a concept website built by Portside Digital. Product photos are from Unsplash, and the prices, stock and reviews are samples.</p>
+</footer>
+</main>
+
+<!-- QUICK VIEW -->
+<div class="qv" id="qv" role="dialog" aria-modal="true" aria-labelledby="qvName" hidden>
+  <div class="qv-scrim" data-close></div>
+  <div class="qv-card">
+    <button class="x" data-close aria-label="Close">×</button>
+    <div class="qv-img"><img id="qvImg" src="" alt=""></div>
+    <div class="qv-body">
+      <span class="sc-tag" id="qvCat"></span>
+      <h3 id="qvName"></h3>
+      <div class="qv-price"><b id="qvPrice"></b><s id="qvWas"></s><em id="qvSave"></em></div>
+      <p id="qvDesc"></p>
+      <ul class="sc-chips" id="qvSpecs"></ul>
+      <div class="qv-opts" id="qvOpts"></div>
+      <div class="qv-stock" id="qvStock"></div>
+      <div class="qv-actions">
+        <div class="qty"><button data-q="-1" aria-label="Less">−</button><span id="qvQty">1</span><button data-q="1" aria-label="More">+</button></div>
+        <button class="btn btn-gold" id="qvAdd">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<aside class="cart" id="cart" aria-label="Cart" hidden>
+  <div class="cart-scrim" data-close-cart></div>
+  <div class="cart-panel">
+    <div class="cart-head"><h3>Your cart</h3><button class="x" data-close-cart aria-label="Close cart">×</button></div>
+    <div class="free-meter" id="freeMeter"><p id="freeText"></p><div class="fm-bar"><i id="fmBar"></i></div></div>
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="cart-empty" id="cartEmpty">
+      <p>Your cart is empty.</p>
+      <a href="#shop" class="btn btn-gold btn-sm" data-close-cart>Start shopping</a>
+    </div>
+    <div class="cart-foot" id="cartFoot">
+      <label class="field"><span>Delivery</span><select id="cartZone"></select></label>
+      <label class="field"><span>Your name (optional)</span><input id="cartName" placeholder="e.g. Kerron"></label>
+      <div class="cart-sum">
+        <div><span>Subtotal</span><b id="sub">$0</b></div>
+        <div><span>Delivery</span><b id="del">$0</b></div>
+        <div class="tot"><span>Total</span><b id="tot">$0</b></div>
+      </div>
+      <a class="btn btn-wa btn-block" id="sendWa" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+        Send order on WhatsApp
+      </a>
+      <p class="cart-small">Pay on delivery. No account needed.</p>
+    </div>
+  </div>
+</aside>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-ov" id="searchOv" hidden>
+  <div class="search-box">
+    <input id="searchBig" type="search" placeholder="What are you looking for?" aria-label="Search products">
+    <ul id="searchRes"></ul>
+    <p class="search-hint">Try "carplay", "fan", "battery" or "under 300"</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<a class="pd-ribbon" href="https://wa.me/18682591409?text=Hi%20Portside%20Digital%2C%20I%20saw%20the%20MBAKU%20demo%20and%20want%20a%20store%20like%20it." target="_blank" rel="noopener">Concept store by <b>Portside Digital</b>. Want it live?</a>
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
